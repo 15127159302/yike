@@ -1,0 +1,11 @@
+<!--pages/testcomponents/index.wxml-->
+<view class='page'>
+<page-index   bind:onloadmore="onloadmore" loadmoreing="{{loadmoreing}}" len="{{mydata.length}}" wH="{{wH}}" >
+    <view class=''>
+      
+    </view>
+
+
+   
+</page-index>
+</view>

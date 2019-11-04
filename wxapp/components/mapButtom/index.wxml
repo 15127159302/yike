@@ -1,0 +1,12 @@
+<view class="buttom">
+  <view class="bottom-he">
+      <view class="news">您有新的消息(9)</view>
+      <view class="open" bindtap="">展开</view>
+  </view>
+  <view class="bottom-bo">
+      <view class="taber">班组看板</view>
+      <view class="taber">考勤</view>
+      <view class="taber">班组管理</view>
+      <view class="taber">我</view>
+  </view>
+</view>

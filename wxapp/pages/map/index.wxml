@@ -1,0 +1,38 @@
+<!--pages/map/index.wxml-->
+<view class='page'>
+    <view class='map'>
+      <map id="map"  scale="14" iconPath= "/resources/others.png" circles="{{circles}}" controls="{{controls}}" longitude="{{longitude}}" circle="{{circle}}" latitude="{{latitude}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap"  bindregionchange="regionchange" show-location ></map>
+      <view class="bottom" style="" >
+        <view class="bottom-he">
+            <view class="bottom-he" wx:if="{{openisshow}}">
+              <view class="news">您有新的消息(9)</view>
+              <view class="open" bindtap="Open">展开</view>
+            </view>
+            <view class="bottom-he" wx:else>
+              <view class="news">全部已读</view>
+              <view class="open" bindtap="Close()">隐藏</view>
+            </view>
+        </view>
+
+        <view class="bottom-center" wx:if="{{openisshow}}" >
+
+        </view>
+
+
+
+        <view class="bottom-bo">
+            <view class="taber">班组看板</view>
+            <view class="taber">考勤</view>
+            <view class="taber">班组管理</view>
+            <view class="taber">我</view>
+        </view>
+      </view>
+     
+  
+        <!--  弹出框调用 -->
+       <!-- <view class="pop"> 
+          <Popup id='dialog' title='w' isshow='{{isshow}}' content='{{content}}' cancelText='取消' confirm='谢谢你' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
+          </Popup>
+      </view> -->
+    </view>
+</view>
