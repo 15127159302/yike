@@ -1,8 +1,68 @@
 <!--pages/map/index.wxml-->
 <view class='page'>
     <view class='map'>
-      <map id="map"  scale="14" iconPath= "/resources/others.png" circles="{{circles}}" controls="{{controls}}" longitude="{{longitude}}" circle="{{circle}}" latitude="{{latitude}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap"  bindregionchange="regionchange" show-location ></map>
+      <map id="map"  scale="14" iconPath= "/resources/others.png"  circles="{{circles}}" controls="{{controls}}" longitude="{{longitude}}" circle="{{circle}}" latitude="{{latitude}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap"  bindregionchange="regionchange" show-location ></map>
 
+    
+
+      <!--  下拉框  -->
+      <view class="selet">
+      
+       <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+      </view>
+
+      <view class="time">
+        <view class="tiem1">
+
+          <view class="Specific">
+             <view class="Specific-time">
+                  <view class="second">第一次</view>
+                  <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+                   <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+              </view>
+          </view>
+          
+          <view class="Specific">
+              <view class="Specific-time">
+                  <view class="second">第一次</view>
+                  <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+                   <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+              </view>
+          </view>
+
+          <view class="Specific">
+              <view class="Specific-time">
+                  <view class="second">第一次</view>
+                  <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+                   <view class="second-time">
+                    <view>上工</view><view>7:15</view>
+                  </view>
+              </view>
+          </view>
+        </view>
+        <view class="tiem2">
+            <view class="newtime"></view>
+
+
+
+        </view>
+      
+      
+      </view>
+
+
+
+      <!-- 返回当前位置 -->
       <view class="Location">
         <view bindtap="Location">
          定位
@@ -32,7 +92,7 @@
 
 
                     <!-- 下拉框  -->
-                  <!-- <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+                  <!--
                    <Select prop-array='{{selectArrays}}' bind:myget='getList'></Select> -->
                   </view>
               </view>

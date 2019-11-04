@@ -4,7 +4,7 @@
 var app = getApp();
 //项目URL相同部分，减轻代码量，同时方便项目迁移
 
-var head= ' ';
+var head = ' ';
 
 /**
  * POST请求，
@@ -16,7 +16,7 @@ var head= ' ';
 function request(url, postData, doSuccess, doFail) {
   wx.request({
     //项目的真正接口，通过字符串拼接方式实现
-    url: head+ url,
+    url: head + url,
     header: {
       "content-type": "application/json;charset=UTF-8"
     },

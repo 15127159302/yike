@@ -2,7 +2,7 @@
 
 
 //引入代码
-var call = require("../../util/request.js")
+var call = require("../../utils/request.js")
 
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 let isRefesh = false; //正在下拉更多

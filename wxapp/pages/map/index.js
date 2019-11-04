@@ -1,4 +1,7 @@
 // pages/map/index.js
+
+// 获取当前时间
+var util=require("../../utils/util.js")
 Page({
 
   /**
@@ -12,6 +15,7 @@ Page({
     content:"哈哈哈",
     openisshow:false, // 展开true 隐藏false  
     height:"",
+    date:"",// 当前时间
     selectArray: [{
       "id": "10",
       "text": "会计类"
@@ -19,13 +23,13 @@ Page({
       "id": "21",
       "text": "工程类"
     }],
-    selectArrays: [{
-      "id": "16",
-      "text": "我我我我我"
-    }, {
-      "id": "33",
-      "text": "eee"
-    }],
+    // selectArrays: [{
+    //   "id": "16",
+    //   "text": "我我我我我"
+    // }, {
+    //   "id": "33",
+    //   "text": "eee"
+    // }],
 
 
     // 用户的具体位置   多个点 
@@ -52,8 +56,12 @@ Page({
       color: '#FF0000DD', // 最外层线的颜色
       fillColor: '#7cb5ec88',   // 圈的颜色
       radius: 1000,  //  圈的半径
-      strokeWidth: 1
-    }]
+      strokeWidth: 1,
+      position: {
+        top: 200
+      }
+    }],
+    
      
   },
   
@@ -62,6 +70,19 @@ Page({
    */
   onLoad: function (options) {
     var that=this
+    // 获取当前时间
+    var TIME = util.formatTime(new Date());
+    that.setData({
+      time: TIME,
+    });
+    console.log(that.data.time)
+
+
+
+
+
+
+
     wx.getLocation({
       type: '需要获取用户的地理位置',
       success: function (res) {
@@ -96,7 +117,9 @@ Page({
           console.log("未在范围内")
         }
         
+
        
+        
       }
     })
    
@@ -188,9 +211,9 @@ Page({
 
 
   // 下拉框
-  // getDate: function (e) {
-  //   console.log(e.detail)
-  // },
+  getDate: function (e) {
+    console.log(e.detail)
+  },
   // getList:function(e){
   //   console.log(e.detail)
   // } ,
