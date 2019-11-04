@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "Popup": "../../../components/Popup/index"
+    "Popup": "../../../components/Popup/index",
+    "Select": "../../../components/selet/index"
   }
 }

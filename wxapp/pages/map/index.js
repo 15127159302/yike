@@ -8,10 +8,24 @@ Page({
     // 具体定位
     longitude:"113.324520",
     latitude:"23.099994",
-    isshow:false,
+    isshow:false,   // 弹出框 调用条件
     content:"哈哈哈",
-    openisshow:false,
-
+    openisshow:false, // 展开true 隐藏false  
+    height:"",
+    selectArray: [{
+      "id": "10",
+      "text": "会计类"
+    }, {
+      "id": "21",
+      "text": "工程类"
+    }],
+    selectArrays: [{
+      "id": "16",
+      "text": "我我我我我"
+    }, {
+      "id": "33",
+      "text": "eee"
+    }],
 
 
     // 用户的具体位置   多个点 
@@ -112,7 +126,7 @@ Page({
    */
   onReady: function () {
 
-    // 调用弹窗事件 true 位调用 false为取消
+    // 调用弹窗事件 true为调用 false为取消
     this.setData({
       "isshow":true
     })
@@ -145,18 +159,47 @@ Page({
 
 
 
-  // 
+  //  展开隐藏
   Open:function(){
-    
+    let that=this
+    let openisshow = that.data.openisshow
+    let height = that.data.height
+    openisshow=true
+    height ="100%"
+    that.setData({
+      openisshow,
+      height
+    })
+
+
   },
 
+  Close:function(){
+    let that = this
+    let openisshow = that.data.openisshow
+    let height = that.data.height
+    openisshow = false
+    height = ""
+    that.setData({
+      openisshow,
+      height
+    })
+  } ,
 
 
+  // 下拉框
+  // getDate: function (e) {
+  //   console.log(e.detail)
+  // },
+  // getList:function(e){
+  //   console.log(e.detail)
+  // } ,
 
-
-
-
-
+  // 回到当前位置
+  Location:function(e){
+    let mpCtx = wx.createMapContext("map");
+    mpCtx.moveToLocation();
+  },
 
 
 
