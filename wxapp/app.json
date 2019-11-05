@@ -3,7 +3,8 @@
    
     "pages/map/index",
     "pages/home/index",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/Foremanhome/index"
   ],
 
   "permission": {
