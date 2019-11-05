@@ -7,7 +7,7 @@ Page({
   /**
    * 页面的初始数据 
    */
-  data: {
+  data: { 
     // 具体定位
     longitude:"113.324520",
     latitude:"23.099994",
